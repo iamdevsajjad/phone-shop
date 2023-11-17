@@ -2,7 +2,6 @@ import React from 'react';
 import Phone from './Phone/Phone';
 
 const Phones = ({phones}) => {
-    console.log(phones);
     return (
         <div>
             <h1 className='text-3xl my-5 text-center'>All Categories phones</h1>
