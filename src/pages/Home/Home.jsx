@@ -10,9 +10,6 @@ const Home = () => {
         .then(data => setPhones(data))
     }, []);
 
-
-    
-    console.log(phones);
     return (
         <div>
             <Banner/>
