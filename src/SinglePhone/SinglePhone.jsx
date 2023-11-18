@@ -1,7 +1,13 @@
 import React from "react";
 
 const SinglePhone = ({phone}) => {
-    console.log(phone);
+
+    const handleAddToFavorites = () =>{
+        console.log(phone);
+    }
+
+
+
     const {image, phone_name, brand_name, price, rating} = phone || {}  ;
   return (
     <div className="fullCard flex justify-center items-center h-[100vh]">
@@ -9,7 +15,7 @@ const SinglePhone = ({phone}) => {
         <div className="relative w-2/5 m-0 overflow-hidden text-gray-700 bg-white rounded-r-none shrink-0 rounded-xl bg-clip-border">
           <img
             src={image}
-            alt="image"
+            alt="image" 
             className="object-cover w-full h-full"
           />
         </div>
@@ -25,12 +31,14 @@ const SinglePhone = ({phone}) => {
           </p>
           <h3 className="text-xl">Price: ${price}</h3>
           <p className="my-3">rating : {rating}stars</p>
-          <a className="inline-block" href="#">
+          {/* <Link className="inline-block" 
+          to="/"> */}
             <button
+            onClick={handleAddToFavorites}
               className="flex items-center gap-2 px-6 py-3 font-sans text-xs font-bold text-center bg-slate-100 text-pink-500 uppercase align-middle transition-all rounded-lg select-none hover:bg-pink-500/10 active:bg-pink-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
               type="button"
             >
-              Learn More
+              Add to favorites
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -47,7 +55,7 @@ const SinglePhone = ({phone}) => {
                 ></path>
               </svg>
             </button>
-          </a>
+          {/* </Li> */}
         </div>
       </div>
     </div>
