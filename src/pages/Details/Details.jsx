@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
+import SinglePhone from '../../SinglePhone/SinglePhone';
 
 const Details = () => {
     const [phone, setPhone] = useState();
@@ -18,8 +19,7 @@ const Details = () => {
 
     return (
         <div>
-            {
-            }
+            <SinglePhone phone={phone}/>
         </div>
     );
 };
